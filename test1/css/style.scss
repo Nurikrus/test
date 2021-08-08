@@ -1,32 +1,34 @@
 * {
     margin: 0;
     padding: 0;
+    font-family: Roboto;
+    height: auto;
 }
-$width-site: 2391px;
-header {
+$width-site: 2264px;
+.header {
     background-color: #2f3136;
-    min-height: 2433px;
+}
+p {
+    min-height: 12em; 
 }
 .container {
     max-width: $width-site;
     display: grid;
     grid-template-columns: 1fr;
-    
+    &__f {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 footer {
     background-color: #2f3136;
-    min-height: 300px;
-    padding-top: 75px;
-    margin-top: 277px;
-    padding-bottom: 75px;
+    padding: 3% 0;
+    margin-top: 5%;
 }
-
 .mailsend {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 }
 .logo {
-    width: 50%;
     padding: 3% 0;
     grid-column: 1/3;
     &__f {
@@ -38,12 +40,13 @@ footer {
     display: flex;
     justify-content: right;
     align-items: center;
-    grid-column-gap: 20%;
+    grid-column-gap: 6%;
+    padding-right: 7%;
     .fa-vk {        
-        padding: 23px 17px;
+        padding: 17% 15%;
     }
     .fa-facebook-f {
-        padding: 24px 35px;
+        padding: 26% 54%;
     }
 }
 i {
@@ -64,54 +67,53 @@ i {
     display: flex;
     justify-content: center;
 }
-.name {
+.form-control, .name, .email, .button, .div_one, .div_two, .p1, .p2, .dark, h1 {
     color: #d7d7d7;
     font-size: 70px;
     font-weight: 500;
     line-height: 65px;
-    margin-bottom: 48px;
 }
-
+.form-control {
+    margin-top: 5%;
+}
 em{
     color: red;
 }
-
-.email {
-    color: #d7d7d7;
-    font-size: 70px;
-    font-weight: 500;
-    line-height: 65px;
-    margin-bottom: 48px;
+.grid1 {
+    grid-row: 1/2;
 }
-
+.grid2 {
+    grid-row: 2/3;
+}
+.grid3 {
+    grid-row: 1/3;
+}
+.textcoment {
+    color: #d7d7d7;
+    height: calc(11em + 0.5em);
+}
 .coment {
     display: grid;
+    grid-template-columns: repeat(2, 1fr);
     grid-column: 1/3;
-    justify-content: space-between;
-    grid-gap: 134px;
+    justify-content: space-around;
+    grid-gap: 5%;
     .namemail {
-        grid-column: 1/2;
+        grid-column: 1/2;        
     }
     .namecoment {
         grid-column: 2/3;
     }
     .adress {
-        position: relative;
-        .textcoment {
-            height: 100%;
-            font-size: 70px;
-            font-weight: 500;
-            line-height: 65px;
-            margin-bottom: 48px;
-            color: #d7d7d7;
-        }
+        display: grid;
+        grid-template-rows: repeat(3, 1fr);
+        grid-gap: 6%;
+        position: relative;        
         .button {
+            grid-row: 3/4;
             background-color: #be393b;
             color: #ffffff;
-            padding: 66px;
-            font-size: 72px;
-            font-weight: 700;
-            line-height: 65px;
+            padding: 7%;
             border-radius: 25px;
             border: 1px solid #be393b;
             position: absolute;
@@ -123,21 +125,16 @@ em{
         }
     }
 }
-
-.dark { 
-    
-    margin: 262px 0;
+.dark {     
+    margin: 15% 0;
     color: #37414e;
     font-size: 86px;
-    font-weight: 500;
-    line-height: 65px;
 }
-
 .form-control {
     border: 3px solid rgba(255, 255, 255, 0.52);
     border-radius: 15px;
     background-color: #2f3136;
-    padding: 75px 63px;
+    padding: 10% 9%;
     &:hover {
         border: 3px solid rgba(190, 57, 59, 0.49);
     }
@@ -145,7 +142,6 @@ em{
         background-color: #2f3136;
     }
 }
-
 h2 {
     color: #37414e;
     font-size: 86px;
@@ -153,56 +149,42 @@ h2 {
     line-height: 65px;
     text-align: center;
 }
-
 .table1 {
-    width: 29%;  
+    width: 29%;
 }
-
+h1 {
+    padding-top: 5%;
+    margin: 0;
+}
 .div_one {
-    padding: 65px 0 0;
-    color: #ffffff;
-    font-size: 68px;
-    font-weight: 500;
-    line-height: 85px;
     text-align: center;
     background-color: #4b596c;
     word-break: break-all;
 }
 .div_two {
-    padding: 65px 0 0;
-    color: #ffffff;
-    font-size: 68px;
-    font-weight: 500;
-    line-height: 85px;
     text-align: center;
     background-color: #58ad52; 
     word-break: break-all; 
 }
 .p1 {
-    padding: 84px;
-    margin-top: 64px;
+    padding: 19%;
+    margin-top: 7%;
     background-color: rgb(151, 149, 149);  
     color: #767582;
-    font-size: 60px;
-    font-weight: 500;
-    line-height: 60px; 
     word-break: break-all;  
     b {
-        margin-bottom: 111px;
+        margin-bottom: 1%;
     } 
 
 }
 .p2 {
-    padding: 84px;
-    margin-top: 64px;
+    padding: 19%;
+    margin-top: 7%;
     color: #768275;
-    font-size: 60px;
-    font-weight: 400;
-    line-height: 60px;
     background-color: rgb(141, 197, 141); 
     word-break: break-all;
     b {
-        margin-bottom: 111px;
+        margin-bottom: 1%;
         color: #58ad52;
     } 
 }
@@ -214,36 +196,56 @@ h2 {
     grid-column-gap: 4%;
     grid-row-gap: 5%;
 }
-
-@media screen and (max-width: 1140px) {
-    $width-site: 1140px;  
+input {
+    background-color: #2f3136;
+}
+@media screen and (max-width: 1440px) {
+    $width-site: 1052px;  
     .container {
         max-width: $width-site;
     } 
     .table1 {
-        width: 47%;        
+        width: 29%;        
     }
     .logo {
         grid-column: 1/13;
     }
     .contact {
-        grid-column: 1/13;
+        grid-column: 2/3;
     }
     .adress {
         width: 92%;
     }
+    .form-control, .name, .email, .button, .div_one, .div_two, .p1, .p2, .fab, h1 {
+        font-size: 26px;
+        line-height: 30px;
+    }
+    .textcoment {
+        height: calc(12em + 1.5em);
+    }
+    .imgwidth {
+        width: 50%;
+        &_1 {
+            width: 35%;
+        }
+    }  
+    h2 {
+        font-size: 36px;
+        line-height: 42px;
+        text-align: center;
+    }
+    .gridwrap {
+        grid-row-gap: 2%;
+    }
 }
-@media screen and (max-width: 675px) {
-    $width-site: 675px;   
+@media screen and (max-width: 375px) {
+    $width-site: 375px;   
     .container {
         max-width: $width-site;
     }  
     .table1 {
         width: 97%;        
-    }
-    .logo {
-        width: 10%;
-    }
+    }    
     .coment {
         .namemail {
             grid-column: 1/3;
@@ -252,11 +254,19 @@ h2 {
             grid-column: 1/3;
         }
     }    
-    .logo_f {
+    .logo__f {
         grid-column: 1/3;
+        grid-row: 1/2;
     }
     .contact {
         grid-column: 1/3;
+        grid-row: 2/3;
         justify-content: center;
+    }
+    .imgwidth {
+        width: 92%;
+    }
+    footer {
+        padding: 8% 0;
     }
 }

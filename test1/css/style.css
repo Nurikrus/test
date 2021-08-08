@@ -1,27 +1,35 @@
 * {
   margin: 0;
   padding: 0;
+  font-family: Roboto;
+  height: auto;
 }
 
-header {
+.header {
   background-color: #2f3136;
-  min-height: 2433px;
+}
+
+p {
+  min-height: 12em;
 }
 
 .container {
-  max-width: 2391px;
+  max-width: 2264px;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
 }
 
+.container__f {
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+}
+
 footer {
   background-color: #2f3136;
-  min-height: 300px;
-  padding-top: 75px;
-  margin-top: 277px;
-  padding-bottom: 75px;
+  padding: 3% 0;
+  margin-top: 5%;
 }
 
 .mailsend {
@@ -32,7 +40,6 @@ footer {
 }
 
 .logo {
-  width: 50%;
   padding: 3% 0;
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
@@ -58,15 +65,16 @@ footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  grid-column-gap: 20%;
+  grid-column-gap: 6%;
+  padding-right: 7%;
 }
 
 .contact .fa-vk {
-  padding: 23px 17px;
+  padding: 17% 15%;
 }
 
 .contact .fa-facebook-f {
-  padding: 24px 35px;
+  padding: 26% 54%;
 }
 
 i {
@@ -96,36 +104,55 @@ i:hover {
           justify-content: center;
 }
 
-.name {
+.form-control, .name, .email, .button, .div_one, .div_two, .p1, .p2, .dark, h1 {
   color: #d7d7d7;
   font-size: 70px;
   font-weight: 500;
   line-height: 65px;
-  margin-bottom: 48px;
+}
+
+.form-control {
+  margin-top: 5%;
 }
 
 em {
   color: red;
 }
 
-.email {
+.grid1 {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+}
+
+.grid2 {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+}
+
+.grid3 {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  grid-row: 1/3;
+}
+
+.textcoment {
   color: #d7d7d7;
-  font-size: 70px;
-  font-weight: 500;
-  line-height: 65px;
-  margin-bottom: 48px;
+  height: calc(11em + 0.5em);
 }
 
 .coment {
   display: -ms-grid;
   display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
   grid-column: 1/3;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  grid-gap: 134px;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  grid-gap: 5%;
 }
 
 .coment .namemail {
@@ -141,25 +168,21 @@ em {
 }
 
 .coment .adress {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: (1fr)[3];
+      grid-template-rows: repeat(3, 1fr);
+  grid-gap: 6%;
   position: relative;
 }
 
-.coment .adress .textcoment {
-  height: 100%;
-  font-size: 70px;
-  font-weight: 500;
-  line-height: 65px;
-  margin-bottom: 48px;
-  color: #d7d7d7;
-}
-
 .coment .adress .button {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  grid-row: 3/4;
   background-color: #be393b;
   color: #ffffff;
-  padding: 66px;
-  font-size: 72px;
-  font-weight: 700;
-  line-height: 65px;
+  padding: 7%;
   border-radius: 25px;
   border: 1px solid #be393b;
   position: absolute;
@@ -172,18 +195,16 @@ em {
 }
 
 .dark {
-  margin: 262px 0;
+  margin: 15% 0;
   color: #37414e;
   font-size: 86px;
-  font-weight: 500;
-  line-height: 65px;
 }
 
 .form-control {
   border: 3px solid rgba(255, 255, 255, 0.52);
   border-radius: 15px;
   background-color: #2f3136;
-  padding: 75px 63px;
+  padding: 10% 9%;
 }
 
 .form-control:hover {
@@ -206,56 +227,45 @@ h2 {
   width: 29%;
 }
 
+h1 {
+  padding-top: 5%;
+  margin: 0;
+}
+
 .div_one {
-  padding: 65px 0 0;
-  color: #ffffff;
-  font-size: 68px;
-  font-weight: 500;
-  line-height: 85px;
   text-align: center;
   background-color: #4b596c;
   word-break: break-all;
 }
 
 .div_two {
-  padding: 65px 0 0;
-  color: #ffffff;
-  font-size: 68px;
-  font-weight: 500;
-  line-height: 85px;
   text-align: center;
   background-color: #58ad52;
   word-break: break-all;
 }
 
 .p1 {
-  padding: 84px;
-  margin-top: 64px;
+  padding: 19%;
+  margin-top: 7%;
   background-color: #979595;
   color: #767582;
-  font-size: 60px;
-  font-weight: 500;
-  line-height: 60px;
   word-break: break-all;
 }
 
 .p1 b {
-  margin-bottom: 111px;
+  margin-bottom: 1%;
 }
 
 .p2 {
-  padding: 84px;
-  margin-top: 64px;
+  padding: 19%;
+  margin-top: 7%;
   color: #768275;
-  font-size: 60px;
-  font-weight: 400;
-  line-height: 60px;
   background-color: #8dc58d;
   word-break: break-all;
 }
 
 .p2 b {
-  margin-bottom: 111px;
+  margin-bottom: 1%;
   color: #58ad52;
 }
 
@@ -274,12 +284,16 @@ h2 {
   grid-row-gap: 5%;
 }
 
-@media screen and (max-width: 1140px) {
+input {
+  background-color: #2f3136;
+}
+
+@media screen and (max-width: 1440px) {
   .container {
-    max-width: 1140px;
+    max-width: 1052px;
   }
   .table1 {
-    width: 47%;
+    width: 29%;
   }
   .logo {
     -ms-grid-column: 1;
@@ -287,24 +301,42 @@ h2 {
     grid-column: 1/13;
   }
   .contact {
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 12;
-    grid-column: 1/13;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2/3;
   }
   .adress {
     width: 92%;
   }
+  .form-control, .name, .email, .button, .div_one, .div_two, .p1, .p2, .fab, h1 {
+    font-size: 26px;
+    line-height: 30px;
+  }
+  .textcoment {
+    height: calc(12em + 1.5em);
+  }
+  .imgwidth {
+    width: 50%;
+  }
+  .imgwidth_1 {
+    width: 35%;
+  }
+  h2 {
+    font-size: 36px;
+    line-height: 42px;
+    text-align: center;
+  }
+  .gridwrap {
+    grid-row-gap: 2%;
+  }
 }
 
-@media screen and (max-width: 675px) {
+@media screen and (max-width: 375px) {
   .container {
-    max-width: 675px;
+    max-width: 375px;
   }
   .table1 {
     width: 97%;
-  }
-  .logo {
-    width: 10%;
   }
   .coment .namemail {
     -ms-grid-column: 1;
@@ -316,18 +348,30 @@ h2 {
     -ms-grid-column-span: 2;
     grid-column: 1/3;
   }
-  .logo_f {
+  .logo__f {
     -ms-grid-column: 1;
     -ms-grid-column-span: 2;
     grid-column: 1/3;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1/2;
   }
   .contact {
     -ms-grid-column: 1;
     -ms-grid-column-span: 2;
     grid-column: 1/3;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2/3;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+  }
+  .imgwidth {
+    width: 92%;
+  }
+  footer {
+    padding: 8% 0;
   }
 }
 /*# sourceMappingURL=style.css.map */
