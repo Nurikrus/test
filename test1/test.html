@@ -9,72 +9,43 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
-    <script type="text/javascript">
-        numid = 1;
-        function createcoment() {
-            var d = document.createElement('div');
-            var p = document.createElement('p');
-            var t = document.createElement('div');
-            t.className = 'table1';
-            t.id = 'table1';
-            if (numid == 1) {
-                d.id = 'one';
-                d.className = 'div_one';
-                p.className = 'p1'
-                p.id = 'p1_text'
-                numid = 0;
-                d.innerHTML = document.getElementById('name').value;
-                p.innerHTML = "<p><b>" + document.getElementById('email').value + '</b></p><br><p>' + document.getElementById('txtarea').value + "</p>";
-                gridwrap.appendChild(t);
-                t.appendChild(d);
-                d.appendChild(p);
-            } else {
-                d.id = 'two';
-                d.className = 'div_two';
-                p.className = 'p2'
-                p.id = 'p2_text'
-                numid = 1;
-                d.innerHTML = document.getElementById('name').value;
-                p.innerHTML = "<p><b>" + document.getElementById('email').value + '</b></p><br><p>' + document.getElementById('txtarea').value + "</p>";
-                gridwrap.appendChild(t);
-                t.appendChild(d);
-                d.appendChild(p);
-            }
-        }
-    </script>
     <script src="https://kit.fontawesome.com/efe89e8818.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <header>
+    <div class="header">
         <div class="container">
             <div class="mailsend">
                 <a href="test.html" class="logo">
-                    <img src="pic/logo.png" alt="pic">
+                    <img class="imgwidth" src="pic/logo.png" alt="pic">
                 </a>
                 <div class="iconmail">
-                    <img src="pic/icon.png" alt="pic">
+                    <img class="imgwidth_1" src="pic/icon.png" alt="pic">
                 </div>
                 <form class="coment" action="">
                     <div class="adress namemail">
-                        <label class="name" for="name">Имя <em>*</em></label><br>
-                        <input type="text" class="form-control name" placeholder="First name" aria-label="First name"
-                            id="name">
-                        <br>
-                        <label class="email" for="email" class="form-label">Email <em>*</em></label>
-                        <br>
-                        <input type="email" class="form-control email" id="email" placeholder="name@example.com">
+                        <div class="grid1">
+                            <label class="name" for="nameUser">Имя<em>*</em></label><br>
+                            <input type="text" class="form-control" placeholder="First name" aria-label="First name"
+                                id="nameUser">
+                        </div>
+                        <div class="grid2">
+                            <label class="email" for="email" class="form-label">Email<em>*</em></label> <br>
+                            <input type="email" class="form-control" id="email" placeholder="name@example.com">
+                        </div>
                     </div>
                     <div class="adress namecoment">
-                        <label class="name" for="exampleFormControlInput1">Коментарий <em>*</em></label><br>
-                        <textarea class="form-control textcoment" id="txtarea" rows="3"></textarea>
-                        <input class="button" type="button" onclick="createcoment()" value="Записать">
+                        <div class="grid3">
+                            <label class="name" for="exampleFormControlInput1">Коментарий<em>*</em></label><br>
+                            <textarea class="form-control textcoment" id="txtarea" rows="3"></textarea>
+                        </div>
+                        <input class="button" type="button" value="Записать">
                     </div>
                 </form>
             </div>
         </div>
 
-    </header>
+    </div>
     <section class="container">
         <div class="dark">
             <h2>Выводим коментарий</h2>
@@ -88,7 +59,7 @@
     <footer>
         <div class="container container__f">
             <a href="test.html" class="logo__f">
-                <img src="pic/logo.png" alt="pic">
+                <img class="imgwidth" src="pic/logo.png" alt="pic">
             </a>
             <div class="contact">
                 <a href="#"><i class="fab fa-vk"></i></a>
@@ -98,7 +69,7 @@
     </footer>
 
 
-
+    <script src="./js/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
         crossorigin="anonymous"></script>
