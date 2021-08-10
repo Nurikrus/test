@@ -13,64 +13,71 @@
 </head>
 
 <body>
-    <div class="header">
-        <div class="container">
-            <div class="mailsend">
-                <a href="test.html" class="logo">
+    <div id="app">
+        <div class="header">
+            <div class="container">
+                <div class="mailsend">
+                    <a href="test.html" class="logo">
+                        <img class="imgwidth" src="pic/logo.png" alt="pic">
+                    </a>
+                    <div class="iconmail">
+                        <img class="imgwidth_1" src="pic/icon.png" alt="pic">
+                    </div>
+                    <form class="coment" action="" @submit.prevent="onSubmit">
+                        <div class="adress namemail">
+                            <div class="grid1">
+                                <label class="name" for="nameUser">Имя<em>*</em></label><br>
+                                <input type="text" class="form-control" placeholder="First name" aria-label="First name"
+                                    id="nameUser" style="background-color: #2f3136;color: #d7d7d7;" required
+                                    v-model="user.userName">
+                            </div>
+                            <div class="grid2">
+                                <label class="email" for="email" class="form-label">Email<em>*</em></label> <br>
+                                <input type="email" class="form-control" id="email" placeholder="name@example.com"
+                                    style="background-color: #2f3136;color: #d7d7d7;" required v-model="user.userMail">
+                            </div>
+                        </div>
+                        <div class="adress namecoment">
+                            <div class="grid3">
+                                <label class="name" for="exampleFormControlInput1">Коментарий<em>*</em></label><br>
+                                <textarea class="form-control textcoment" id="txtarea" rows="3"
+                                    style="background-color: #2f3136;color: #d7d7d7;" required
+                                    v-model="user.userComent"></textarea>
+                            </div>
+                            <button class="button" type="submit">Записать</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+        <section class="container">
+            <div class="dark">
+                <h2>Выводим коментарий</h2>
+            </div>
+
+            <div class="gridwrap" id="gridwrap">
+
+            </div>
+        </section>
+        <footer>
+            <div class="container container__f">
+                <a href="test.html" class="logo__f">
                     <img class="imgwidth" src="pic/logo.png" alt="pic">
                 </a>
-                <div class="iconmail">
-                    <img class="imgwidth_1" src="pic/icon.png" alt="pic">
+                <div class="contact">
+                    <a href="#"><i class="fab fa-vk"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
                 </div>
-                <form class="coment" action="">
-                    <div class="adress namemail">
-                        <div class="grid1">
-                            <label class="name" for="nameUser">Имя<em>*</em></label><br>
-                            <input type="text" class="form-control" placeholder="First name" aria-label="First name"
-                                id="nameUser" style="background-color: #2f3136;color: #d7d7d7;">
-                        </div>
-                        <div class="grid2">
-                            <label class="email" for="email" class="form-label">Email<em>*</em></label> <br>
-                            <input type="email" class="form-control" id="email" placeholder="name@example.com"
-                                style="background-color: #2f3136;color: #d7d7d7;">
-                        </div>
-                    </div>
-                    <div class="adress namecoment">
-                        <div class="grid3">
-                            <label class="name" for="exampleFormControlInput1">Коментарий<em>*</em></label><br>
-                            <textarea class="form-control textcoment" id="txtarea" rows="3"
-                                style="background-color: #2f3136;color: #d7d7d7;"></textarea>
-                        </div>
-                        <input class="button" type="button" value="Записать">
-                    </div>
-                </form>
             </div>
-        </div>
-
+        </footer>
     </div>
-    <section class="container">
-        <div class="dark">
-            <h2>Выводим коментарий</h2>
-        </div>
-
-        <div class="gridwrap" id="gridwrap">
-
-        </div>
-    </section>
-
-    <footer>
-        <div class="container container__f">
-            <a href="test.html" class="logo__f">
-                <img class="imgwidth" src="pic/logo.png" alt="pic">
-            </a>
-            <div class="contact">
-                <a href="#"><i class="fab fa-vk"></i></a>
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-            </div>
-        </div>
-    </footer>
 
 
+    <script defer src="https://use.fontawesome.com/releases/v5.7.2/js/all.js"
+        integrity="sha384-0pzryjIRos8mFBWMzSSZApWtPl/5++eIfzYmTgBBmXYdhvxPc+XcFEk+zJwDgWbP"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="./js/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
